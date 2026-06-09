@@ -1,0 +1,152 @@
+// ══════════════════════════════════════════
+// DATA PORTFOLIO — Wahyu Argo Mulyo
+// Edit file ini untuk update konten portfolio
+// ══════════════════════════════════════════
+
+export const profile = {
+  name: "Wahyu Argo Mulyo",
+  tagline: "Junior Full Stack Developer",
+  location: "Semarang, Jawa Tengah",
+  email: "wahyuargomu123@gmail.com",
+  whatsapp: "+62 8122-6983-990",
+  education: "Teknik Informatika,Telkom University",
+  github: "https://github.com/Whyzenn07",
+  linkedin: "https://linkedin.com/in/wahyu-argoo-887594347",
+  instagram: "https://instagram.com/wahyu_arzm",
+  cvLink: "/cv-wahyu-argo.pdf",
+  bio: [
+    "Saya adalah seorang mahasiswa tingkat akhir sekaligus seorang Junior Full Stack Developer yang bersemangat dalam merancang dan membangun aplikasi web yang indah, cepat, dan mudah digunakan. Dengan pengalaman lebih dari 1 tahun, saya telah mengerjakan 20+ proyek — mulai dari web app, REST API, hingga UI/UX.",
+    "Saya percaya bahwa kode yang baik bukan hanya yang berjalan dengan benar, tetapi juga yang mudah dibaca, dipelihara, dan dikembangkan. Clean code dan user experience adalah dua hal yang selalu saya prioritaskan.",
+    "Di luar coding, saya aktif belajar teknologi baru, berkontribusi ke open-source, dan berbagi pengetahuan dengan komunitas developer.",
+  ],
+  typingTexts: [
+    "Junior Full Stack Dev",
+    "Frontend Engineer",
+    "React Enthusiast",
+    "Problem Solver",
+    "UI/UX Learner",
+    "Tech Explorer",
+    "AI Prompter",
+  ],
+};
+
+export const stats = [
+  { icon: "code", value: 1, suffix: "+", label: "Year Experience" },
+  { icon: "rocket", value: 15, suffix: "+", label: "Projects Done" },
+  { icon: "users", value: 10, suffix: "+", label: "Happy Clients" },
+];
+
+export const projects = [
+  {
+    id: 1,
+    emoji: "🛒",
+    category: "fullstack",
+    label: "Full Stack",
+    title: "E-Commerce Platform",
+    desc: "Platform belanja online lengkap dengan fitur cart, payment gateway Midtrans, manajemen produk, dan dashboard admin real-time.",
+    tech: ["React", "Node.js", "MongoDB", "Midtrans"],
+    github: "#",
+    demo: "#",
+    featured: true,
+    gradient: "from-[#0d1f3c] to-[#1a3a5c]",
+  },
+  {
+    id: 2,
+    emoji: "📊",
+    category: "frontend",
+    label: "Frontend",
+    title: "Analytics Dashboard",
+    desc: "Dashboard visualisasi data real-time dengan chart interaktif, filter dinamis, dan export laporan PDF.",
+    tech: ["React", "Recharts", "Tailwind"],
+    github: "#",
+    demo: "#",
+    featured: false,
+    gradient: "from-[#0d2c1e] to-[#1a4a32]",
+  },
+  {
+    id: 3,
+    emoji: "🔗",
+    category: "backend",
+    label: "Backend",
+    title: "REST API Blog Platform",
+    desc: "API backend lengkap dengan autentikasi JWT, CRUD artikel, komentar, dan sistem role admin/user.",
+    tech: ["Express.js", "PostgreSQL", "JWT"],
+    github: "#",
+    demo: "#",
+    featured: false,
+    gradient: "from-[#2c0d2c] to-[#4a1a4a]",
+  },
+  {
+    id: 4,
+    emoji: "📋",
+    category: "fullstack",
+    label: "Full Stack",
+    title: "Task Management App",
+    desc: "Aplikasi manajemen tugas tim dengan Kanban board, drag & drop, notifikasi real-time via WebSocket.",
+    tech: ["Next.js", "Socket.io", "MySQL"],
+    github: "#",
+    demo: "#",
+    featured: false,
+    gradient: "from-[#2c1a0d] to-[#4a2e1a]",
+  },
+  {
+    id: 5,
+    emoji: "🌤️",
+    category: "frontend",
+    label: "Frontend",
+    title: "Weather App",
+    desc: "Aplikasi cuaca dengan geolocation, animasi kondisi cuaca dinamis, dan forecast 7 hari ke depan.",
+    tech: ["Vue.js", "OpenWeather API", "CSS Animation"],
+    github: "#",
+    demo: "#",
+    featured: false,
+    gradient: "from-[#0d2c2c] to-[#1a4a4a]",
+  },
+  {
+    id: 6,
+    emoji: "🤖",
+    category: "backend",
+    label: "Backend",
+    title: "Chatbot API Service",
+    desc: "Layanan chatbot berbasis OpenAI API dengan context memory, rate limiting, dan webhook integration.",
+    tech: ["FastAPI", "Python", "Redis"],
+    github: "#",
+    demo: "#",
+    featured: false,
+    gradient: "from-[#1a0d2c] to-[#2e1a4a]",
+  },
+];
+
+export const skills = {
+  bars: [
+    { name: "HTML & CSS", level: 90 },
+    { name: "JavaScript", level: 80 },
+    { name: "React / Next.js", level: 75 },
+    { name: "Node.js / Express", level: 72 },
+    { name: "MySQL / PostgreSQL", level: 68 },
+    { name: "Python", level: 70 },
+    { name: "Git & GitHub", level: 80 },
+  ],
+  icons: [
+    { icon: "⚛️", name: "React" },
+    { icon: "▲", name: "Next.js" },
+    { icon: "🟨", name: "JavaScript" },
+    { icon: "🔷", name: "TypeScript" },
+    { icon: "🟩", name: "Node.js" },
+    { icon: "🐘", name: "PostgreSQL" },
+    { icon: "🍃", name: "MongoDB" },
+    { icon: "🐍", name: "Python" },
+    { icon: "🐳", name: "Docker" },
+    { icon: "🔥", name: "Firebase" },
+    { icon: "💨", name: "Tailwind" },
+    { icon: "🐱", name: "Git" },
+  ],
+};
+
+export const navLinks = [
+  { href: "home", label: "Home" },
+  { href: "about", label: "About" },
+  { href: "projects", label: "Projects" },
+  { href: "skills", label: "Skills" },
+  { href: "contact", label: "Contact" },
+];

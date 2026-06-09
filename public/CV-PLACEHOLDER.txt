@@ -1,0 +1,14 @@
+LETAKKAN FILE CV KAMU DI SINI
+==============================
+
+Rename file PDF CV kamu menjadi:
+  cv-wahyu-argo.pdf
+
+Lalu letakkan di folder ini:
+  public/cv-wahyu-argo.pdf
+
+File yang ada di folder public/ akan otomatis tersedia di URL root,
+sehingga link /cv-wahyu-argo.pdf akan langsung bisa diakses.
+
+Setelah menambahkan file PDF, tombol "Download CV" di Hero dan About
+akan langsung berfungsi dan mengunduh file CV secara otomatis.
