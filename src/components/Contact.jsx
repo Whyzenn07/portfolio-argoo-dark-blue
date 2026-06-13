@@ -133,7 +133,7 @@ export default function Contact() {
               icon : <LocationIcon />,
               label: 'Lokasi',
               val  : profile.location,
-              href : null,
+              href : profile.locationMapUrl,
             },
             {
               icon : <PhoneIcon />,

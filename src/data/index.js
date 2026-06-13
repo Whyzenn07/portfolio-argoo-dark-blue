@@ -6,7 +6,8 @@
 export const profile = {
   name: "Wahyu Argo Mulyo",
   tagline: "Junior Full Stack Developer",
-  location: "Semarang, Jawa Tengah",
+  location: "Pucang Gading Raya, Semarang",
+  locationMapUrl: "https://maps.google.com/?q=Jl+Pucang+Gading+Raya,+Semarang,+Jawa+Tengah,+Indonesia",
   email: "wahyuargomu123@gmail.com",
   whatsapp: "+62 8122-6983-990",
   education: "Teknik Informatika,Telkom University",

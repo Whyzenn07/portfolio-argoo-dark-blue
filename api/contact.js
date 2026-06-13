@@ -31,18 +31,28 @@ export default async function handler(req, res) {
   const timestamp = new Date().toLocaleString('id-ID', { timeZone: 'Asia/Jakarta' })
 
   // ── 1. Gmail via Nodemailer ──────────────────────────
+  const gmailUser = process.env.GMAIL_USER
+  const gmailPass = process.env.GMAIL_APP_PASSWORD
+
+  if (!gmailUser || !gmailPass) {
+    console.error('GMAIL_USER atau GMAIL_APP_PASSWORD belum dikonfigurasi di environment variables')
+    return res.status(500).json({
+      error: `Layanan email belum dikonfigurasi. Silakan hubungi langsung via email: ${gmailUser ?? 'wahyuargomu123@gmail.com'}`,
+    })
+  }
+
   try {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_APP_PASSWORD,
+        user: gmailUser,
+        pass: gmailPass,
       },
     })
 
     await transporter.sendMail({
-      from   : `"Portfolio Contact" <${process.env.GMAIL_USER}>`,
-      to     : process.env.GMAIL_USER,
+      from   : `"Portfolio Contact" <${gmailUser}>`,
+      to     : gmailUser,
       replyTo: email,
       subject: `[Portfolio] ${subject} — dari ${name}`,
       html   : buildEmailHTML({ name, email, subject, message, timestamp }),
@@ -51,13 +61,12 @@ export default async function handler(req, res) {
     console.log(`[${new Date().toISOString()}] ✉️  Email dari ${name} <${email}>`)
   } catch (err) {
     console.error('Email error:', err.message)
-    // Tetap lanjut, coba kirim WA
     if (err.code === 'EAUTH')
       return res.status(500).json({
-        error: 'Konfigurasi Gmail salah. Hubungi admin.',
+        error: 'App Password Gmail tidak valid. Pastikan sudah membuat App Password di myaccount.google.com/apppasswords',
       })
     return res.status(500).json({
-      error: 'Gagal mengirim pesan. Silakan email langsung ke ' + (process.env.GMAIL_USER ?? ''),
+      error: 'Gagal mengirim pesan. Silakan email langsung ke ' + gmailUser,
     })
   }
 

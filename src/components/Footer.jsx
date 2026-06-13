@@ -92,10 +92,16 @@ export default function Footer() {
               <EmailIcon />
               {profile.email}
             </a>
-            <div className="flex items-center gap-2 text-[#64748b] text-[0.85rem]">
+            <a
+              href={profile.locationMapUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 text-[#64748b] text-[0.85rem]
+                         hover:text-[#00c8ff] transition-colors duration-200"
+            >
               <LocationSm />
               {profile.location}
-            </div>
+            </a>
             <div className="flex items-center gap-2 mt-2">
               <div className="badge-dot" />
               <span className="text-[0.8rem] text-[#22c55e] font-semibold">Open to Work</span>
